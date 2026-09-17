@@ -171,6 +171,8 @@ def search_songs(
         if value and q in value:
             filtered.append(song)
 
+    # Strobe
+
     return filtered
 
 
@@ -193,6 +195,8 @@ def random_choice_or_none(songs: List[Song]) -> Optional[Song]:
     """Return a random song or None."""
     import random
 
+    if not songs:
+        return None
     return random.choice(songs)
 
 
